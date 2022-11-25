@@ -1,11 +1,5 @@
 import express from "express";
-import {
-  createLog,
-  deleteLog,
-  getLog,
-  getLogs,
-  updateLog,
-} from "../controllers/getLogs.js";
+import { createLog, getLog, getLogs } from "../controllers/getLogs.js";
 import Log from "../models/Log.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
@@ -14,11 +8,11 @@ const router = express.Router();
 router.post("/", createLog);
 
 // UPDATE
-router.put("/:id", updateLog);
+// router.put("/:id", updateLog);
 
 // DELETE
 
-router.delete("/:id", deleteLog);
+// router.delete("/:id", deleteLog);
 
 // GET
 
